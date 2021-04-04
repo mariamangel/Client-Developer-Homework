@@ -51,7 +51,7 @@
 <script>
     function addRow() {
         let word = document.getElementById('word').value;
-        let exResult = document.getElementById('result').value.toLowerCase();
+        let exResult = document.getElementById('result').value;
         let table = document.getElementById('palindromeTable').getElementsByTagName('tbody')[0];
         let rows = document.getElementById('palindromeTable').querySelectorAll('tbody tr').length;
         let nr;
@@ -67,7 +67,7 @@
         let c;
 
         let acResult = isPalindrome(word).toString();
-        if (acResult === exResult){
+        if (acResult === exResult.toLowerCase().trim()){
             c = "<td style='background-color: #2fbe2f'>" + true + "</td>"
         } else {
             c = "<td style='background-color: #e52e2e'>" + false + "</td>"
